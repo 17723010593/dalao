@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen
+    android:key="preference_screen"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <PreferenceCategory
+        android:title="代码高亮">
+        <CheckBoxPreference
+            android:title="启用代码高亮"
+            android:key="advanced_setting_enable_highlight"
+            android:summary="是否启用自定义代码高亮颜色"
+            android:defaultValue="true" />
+        <Preference
+            android:title="代码高亮配置"
+            android:key="preference_highlight"
+            android:summary="点击这里修改" />
+    </PreferenceCategory>
+    <PreferenceCategory
+        android:title="中文补全">
+        <CheckBoxPreference
+            android:title="启用中文补全"
+            android:key="advanced_setting_enable_translate"
+            android:summary="补全翻译，添加中文注释（/sdcard/.aide/config/translate/translate.db）"
+            android:defaultValue="true" />
+        <EditTextPreference
+            android:hint="密钥"
+            android:selectAllOnFocus="true"
+            android:title="设置Yandex翻译密钥"
+            android:key="key_yandex"
+            android:summary="设置翻译密钥"
+            android:defaultValue="trnsl.1.1.20190930T205816Z.a9f88a3c4b7e0c95.920cb9f62edfa90f9253d2a8b1980bad01f5aba4" />
+        <Preference
+            android:title="清除翻译文件"
+            android:key="clear_translate"
+            android:summary="清除已翻译的内容，清除后下次需重新翻译" />
+    </PreferenceCategory>
+    <PreferenceCategory
+        android:title="Res混淆">
+        <CheckBoxPreference
+            android:title="启用 Res资源混淆"
+            android:key="advanced_setting_enable_resguard"
+            android:summary="混淆res，简短文件名，减少APK体积。"
+            android:defaultValue="false" />
+        <Preference
+            android:title="添加配置文件到工程"
+            android:key="add_proguard_config"
+            android:summary="添加Res混淆配置文件到工程" />
+    </PreferenceCategory>
+    <PreferenceCategory
+        android:title="StringFog">
+        <CheckBoxPreference
+            android:title="启用String Fog"
+            android:key="advanced_setting_enable_stringfog"
+            android:summary="编译时加密Class中的字符串"
+            android:defaultValue="false" />
+        <Preference
+            android:title="功能说明"
+            android:key="preference_stringfog" />
+    </PreferenceCategory>
+    <PreferenceCategory
+        android:title="工程">
+        <CheckBoxPreference
+            android:title="启用 adrt调试文件"
+            android:key="advanced_setting_enable_adrt"
+            android:summary="关闭后将无法使用debug调试模式。重启AIDE并重新构建工程生效"
+            android:defaultValue="true" />
+        <CheckBoxPreference
+            android:title="重定义Apk构建路径"
+            android:key="advanced_setting_adjust_apk_build_path"
+            android:summary="将打包的apk存放到 -> 工程/build/bin/里面，而不是/sdcard/Android/data/xx/cache/apk/"
+            android:defaultValue="false" />
+        <EditTextPreference
+            android:hint="com.mycompany."
+            android:selectAllOnFocus="true"
+            android:title="包名前缀"
+            android:key="advanced_setting_package_prefix"
+            android:summary="设置创建工程的包名前缀，留空则使用默认。包名规范：com(xxx).开发者名.应用名"
+            android:defaultValue="com.mycompany." />
+    </PreferenceCategory>
+    <PreferenceCategory
+        android:title="编辑框">
+        <Preference
+            android:title="自定义符号"
+            android:key="preference_quick_key"
+            android:summary="自定义编辑框快捷符号" />
+        <EditTextPreference
+            android:hint="字体路径"
+            android:selectAllOnFocus="true"
+            android:title="编辑框字体"
+            android:key="advanced_setting_editor_font_path"
+            android:summary="设置编辑框字体，重启AIDE生效。留空则使用默认" />
+    </PreferenceCategory>
+    <PreferenceCategory
+        android:title="常用代码">
+        <CheckBoxPreference
+            android:title="启用 菜单栏常用代码"
+            android:key="advanced_setting_enable_menu_code"
+            android:summary="是否在菜单栏中显示自己的常用代码"
+            android:defaultValue="true" />
+        <Preference
+            android:summary="配置文件请到 -> /sdcard/.aide/_data/menucode/xxx.txt 修改" />
+    </PreferenceCategory>
+    <PreferenceCategory
+        android:title="Gradle">
+        <CheckBoxPreference
+            android:title="启用 自定义依赖项"
+            android:key="advanced_setting_enable_dependency"
+            android:summary="是否启用自定义依赖项"
+            android:defaultValue="false" />
+        <Preference
+            android:summary="配置文件请到 -> /sdcard/.aide/_data/dependency/dependency.txt 修改" />
+    </PreferenceCategory>
+    <PreferenceCategory
+        android:title="UI调整">
+        <CheckBoxPreference
+            android:title="显示标题栏软件图标"
+            android:key="advanced_setting_enable_logo"
+            android:summary="是否显示主界面标题栏左上角的软件图标。"
+            android:defaultValue="false" />
+        <CheckBoxPreference
+            android:title="显示创建工程对话框"
+            android:key="advanced_setting_enable_select_mode_dialog"
+            android:summary="是否显示未打开文件时显示的对话框"
+            android:defaultValue="true" />
+        <EditTextPreference
+            android:hint="2"
+            android:selectAllOnFocus="true"
+            android:title="搜索结果项文本调整"
+            android:key="advanced_setting_search_item_maxline"
+            android:summary="设置文本显示的最大行数。"
+            android:defaultValue="2"
+            android:inputType="number" />
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        android:title="主题">
+        
+        <Preference
+            android:title="软件主题"
+            android:key="pref_theme"
+            android:summary="设置软件主题" />
+        
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        android:title="翻译">
+        <EditTextPreference
+            android:selectAllOnFocus="true"
+            android:title="设置翻译接口"
+            android:key="api_web_translation"
+            android:summary="设置文字翻译接口网址" />
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        android:title="About">
+        <Preference
+            android:title="魔改作者"
+            android:key="s1243808733"
+            android:summary="s1243808733" />
+        <Preference
+            android:title="底包出自"
+            android:summary="酷安@a4455jkjh">
+            <intent
+                android:action="android.intent.action.VIEW"
+                android:data="http://www.coolapk.com/u/773898" />
+        </Preference>
+    </PreferenceCategory>
+</PreferenceScreen>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="AppTheme" parent="@android:style/Theme.Holo.Light">
+    </style>
+
+
+	<style name="theme_translation"/>
+
+    <style name="MyAppThemeLight"/>
+    <style name="MyAppThemeLight_Indigo"/>
+	<style name="MyAppThemeDark" />
+    <style name="MyAppThemeDark_Indigo" />
+	
+    
+
+
+</resources>

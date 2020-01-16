@@ -1,0 +1,58 @@
+<?xml version='1.0' encoding='utf-8'?>
+<manifest
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.a4455jkjh">
+
+    <!--写入/删除您的SD卡中的内容-->
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+
+    <!--读取您的SD卡中的内容-->
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+
+    <application
+        android:name=".app"
+        android:allowBackup="true"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme">
+
+        <activity
+            android:name=".tmp"
+            android:label="@string/app_name">
+
+            <intent-filter>
+
+                <action android:name="android.intent.action.MAIN"/>
+
+                <category android:name="android.intent.category.LAUNCHER"/>
+
+            </intent-filter>
+
+        </activity>
+
+        <activity
+            android:name="com.s1243808733.aide.AdvancedSettingsActivity"
+            android:launchMode="singleTask"/>
+
+        <activity
+            android:name="com.s1243808733.aide.highlight.HighlightActivity"
+            android:launchMode="singleTask"/>
+
+        <activity
+            android:name="com.s1243808733.permission.ManifestActivity"
+            android:launchMode="singleTask"/>
+
+        <activity
+            android:name="com.s1243808733.icons.IconActivity"
+            android:launchMode="singleTask"/>
+
+        <activity android:name="com.s1243808733.androidr.AndroidRActivity"/>
+
+        <activity
+            android:theme="@style/theme_translation"
+            android:name="com.s1243808733.translate.web.WebTranslateActivity"/>
+
+        <activity android:name="com.s1243808733.util.CrashUtils$ExActivity"/>
+
+    </application>
+
+</manifest>
